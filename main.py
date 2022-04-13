@@ -56,11 +56,12 @@ def run_me(source_path, hostname, port):
     print(results)
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    sourcePath = "C:/Users/622931/git_repos/lighthouse-mock-mpi/mock-mpi/src/main/resources/data/PRPA_IN201306UV02/profile_icn"
+    # change this to whatever folder path on your machine has the mock mpi repo.
+    mockMpiParentDirectory = "C:/Users/622931/git_repos"
+
+    profileIcnRelativePath = "lighthouse-mock-mpi/mock-mpi/src/main/resources/data/PRPA_IN201306UV02/profile_icn"
+    sourcePath = os.path.join(mockMpiParentDirectory, profileIcnRelativePath)
     hostName = "http://localhost"
     port = "8099"
     run_me(sourcePath, hostName, port)
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
